@@ -17,6 +17,7 @@
 		473B5DAA2424299B003ED92B /* MotorCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5DA92424299B003ED92B /* MotorCycle.swift */; };
 		473B5DAC24242CA6003ED92B /* VehicleRent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5DAB24242CA6003ED92B /* VehicleRent.swift */; };
 		473B5DB024242D90003ED92B /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5DAF24242D90003ED92B /* Date+Extension.swift */; };
+		473B5DB224242DEE003ED92B /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5DB124242DEE003ED92B /* String+Extension.swift */; };
 		47EA14B82422EB9700C635D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EA14B72422EB9700C635D9 /* AppDelegate.swift */; };
 		47EA14BA2422EB9700C635D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EA14B92422EB9700C635D9 /* SceneDelegate.swift */; };
 		47EA14BC2422EB9700C635D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EA14BB2422EB9700C635D9 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 		473B5DA92424299B003ED92B /* MotorCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorCycle.swift; sourceTree = "<group>"; };
 		473B5DAB24242CA6003ED92B /* VehicleRent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleRent.swift; sourceTree = "<group>"; };
 		473B5DAF24242D90003ED92B /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		473B5DB124242DEE003ED92B /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		47EA14B42422EB9700C635D9 /* VehicleRentingSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VehicleRentingSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47EA14B72422EB9700C635D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47EA14B92422EB9700C635D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				473B5DAF24242D90003ED92B /* Date+Extension.swift */,
+				473B5DB124242DEE003ED92B /* String+Extension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				473B5DA824242947003ED92B /* Bus.swift in Sources */,
 				473B5DAC24242CA6003ED92B /* VehicleRent.swift in Sources */,
 				473B5DA02424279F003ED92B /* Driver.swift in Sources */,
+				473B5DB224242DEE003ED92B /* String+Extension.swift in Sources */,
 				473B5DA2242427F7003ED92B /* Person.swift in Sources */,
 				473B5DA6242428D6003ED92B /* Customer.swift in Sources */,
 				473B5D9D24242692003ED92B /* Vehicle.swift in Sources */,
