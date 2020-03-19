@@ -14,6 +14,7 @@
 		473B5DA424242870003ED92B /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5DA324242870003ED92B /* Owner.swift */; };
 		473B5DA6242428D6003ED92B /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5DA5242428D6003ED92B /* Customer.swift */; };
 		473B5DA824242947003ED92B /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5DA724242947003ED92B /* Bus.swift */; };
+		473B5DAA2424299B003ED92B /* MotorCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5DA92424299B003ED92B /* MotorCycle.swift */; };
 		47EA14B82422EB9700C635D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EA14B72422EB9700C635D9 /* AppDelegate.swift */; };
 		47EA14BA2422EB9700C635D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EA14B92422EB9700C635D9 /* SceneDelegate.swift */; };
 		47EA14BC2422EB9700C635D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EA14BB2422EB9700C635D9 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 		473B5DA324242870003ED92B /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		473B5DA5242428D6003ED92B /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		473B5DA724242947003ED92B /* Bus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
+		473B5DA92424299B003ED92B /* MotorCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorCycle.swift; sourceTree = "<group>"; };
 		47EA14B42422EB9700C635D9 /* VehicleRentingSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VehicleRentingSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47EA14B72422EB9700C635D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47EA14B92422EB9700C635D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				473B5D9A24242647003ED92B /* Car.swift */,
 				473B5D9C24242692003ED92B /* Vehicle.swift */,
 				473B5DA724242947003ED92B /* Bus.swift */,
+				473B5DA92424299B003ED92B /* MotorCycle.swift */,
 			);
 			path = Vehicle;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				473B5DA6242428D6003ED92B /* Customer.swift in Sources */,
 				473B5D9D24242692003ED92B /* Vehicle.swift in Sources */,
 				47EA14BA2422EB9700C635D9 /* SceneDelegate.swift in Sources */,
+				473B5DAA2424299B003ED92B /* MotorCycle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
