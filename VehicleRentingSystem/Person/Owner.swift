@@ -42,7 +42,7 @@ class Owner:Person//, Codable
     
     
     
-    init(id:String, firstName: String, lastName: String, gender: Gender, mobileNumber: String, birthDate: Date, emailID: String, userName: String, password: String, companyTitle:String, landlineNumber:String, website:String) throws
+    init(id:String, firstName: String, lastName: String, gender: Gender, mobileNumber: String, birthDate: Date, emailID: String, userName: String, password: String, companyTitle:String, landlineNumber:String, website:String) //throws
     {
         self.id = id
         self.firstName = firstName
@@ -51,7 +51,7 @@ class Owner:Person//, Codable
         if mobileNumber.count != 10
         {
           print("Name :- \(firstName) has Invalid Mobile Number \(mobileNumber) : Cannot be less than 10 digits")
-            throw  CustomException.invalidNumber
+//            throw  CustomException.invalidNumber
             
         }
         self.mobileNumber = mobileNumber
@@ -70,7 +70,7 @@ class Owner:Person//, Codable
                    else
                    {
                        print("Invalid Email ID for \(self.firstName) : \(emailID) ")
-                       throw CustomException.invalidEmail
+//                       throw CustomException.invalidEmail
                
                    }
         

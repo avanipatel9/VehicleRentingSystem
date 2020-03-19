@@ -45,7 +45,7 @@ class Driver:Person//, Codable
         if mobileNumber.count != 10
         {
           print("Name :- \(firstName) has  Invalid Mobile Number \(mobileNumber) : Cannot be less than 10 digits")
-            throw  CustomException.invalidNumber
+//            throw  CustomException.invalidNumber
             
         }
         self.mobileNumber=mobileNumber
@@ -67,7 +67,7 @@ class Driver:Person//, Codable
                    else
                    {
                        print("Invalid Email ID for \(self.firstName) : \(emailID) ")
-                       throw CustomException.invalidEmail
+//                       throw CustomException.invalidEmail
                
                    }
     }
@@ -79,21 +79,21 @@ class Driver:Person//, Codable
         return emailTest.evaluate(with: email)
     }
     
-    func Display() {
-        print("\t-----------------------------------------------")
-        print("\t--------------Driver Details---------------")
-        print("\t First Name : \(self.firstName)")
-        print("\t Last Name: \(self.lastName)")
-        print("\t Gender : \(self.gender)")
-        print("\t Mobile Number : \(self.mobileNumber)")
-        print("\t BirthDate : \(self.birthDate!.getForamttedDate())")
-        print("\t Emaild ID : \(self.emailID ?? "nil")")
-        print("\t User Name : \(self.userName)")
-        //Add extension for password encrypt decrypt
-        print("\t Password Encrypted : \(self.password.encryptPassword())")
-        print("\t Password Decrypted : \(self.password.decryptPassword())")
-        print("\t Age : \(self.age!)")
-        print("\t Driving Licence Number : \(self.drivingLicenceNumber)")
-    }
+//    func Display() {
+//        print("\t-----------------------------------------------")
+//        print("\t--------------Driver Details---------------")
+//        print("\t First Name : \(self.firstName)")
+//        print("\t Last Name: \(self.lastName)")
+//        print("\t Gender : \(self.gender)")
+//        print("\t Mobile Number : \(self.mobileNumber)")
+//        print("\t BirthDate : \(self.birthDate!.getForamttedDate())")
+//        print("\t Emaild ID : \(self.emailID ?? "nil")")
+//        print("\t User Name : \(self.userName)")
+//        //Add extension for password encrypt decrypt
+//        print("\t Password Encrypted : \(self.password.encryptPassword())")
+//        print("\t Password Decrypted : \(self.password.decryptPassword())")
+//        print("\t Age : \(self.age!)")
+//        print("\t Driving Licence Number : \(self.drivingLicenceNumber)")
+//    }
     
 }

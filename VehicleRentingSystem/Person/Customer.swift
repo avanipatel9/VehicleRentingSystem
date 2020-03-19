@@ -41,7 +41,7 @@ class Customer: Person//, Codable
     lazy var vehicleListRented = [String : VehicleRent]()
     
     
-    init(id:String, firstName: String, lastName: String, gender: Gender, mobileNumber: String, birthDate: Date, emailID: String, userName: String, password: String, address: String, city: String) throws
+    init(id:String, firstName: String, lastName: String, gender: Gender, mobileNumber: String, birthDate: Date, emailID: String, userName: String, password: String, address: String, city: String) //throws
     {
         
         self.id = id
@@ -51,7 +51,7 @@ class Customer: Person//, Codable
         if mobileNumber.count != 10
         {
           print("Name :- \(firstName) has  Invalid Mobile Number \(mobileNumber) : Cannot be less than 10 digits")
-            throw  CustomException.invalidNumber
+//            throw  CustomException.invalidNumber
             
         }
         self.mobileNumber=mobileNumber
@@ -65,7 +65,7 @@ class Customer: Person//, Codable
         self.city = city
         self.address = address
         self.city = city
-        if isEmailValid(email: emailID)
+        if self.emailID?.isValidEmail() == true
            {
               
                self.emailID=emailID
@@ -73,7 +73,7 @@ class Customer: Person//, Codable
             else
             {
                 print("Invalid Email ID for \(self.firstName) : \(emailID) ")
-                throw CustomException.invalidEmail
+//                throw CustomException.invalidEmail
         
             }
     }
