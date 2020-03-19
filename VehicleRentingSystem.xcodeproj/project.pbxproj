@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		473B5D9B24242647003ED92B /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5D9A24242647003ED92B /* Car.swift */; };
 		473B5D9D24242692003ED92B /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5D9C24242692003ED92B /* Vehicle.swift */; };
+		473B5DA02424279F003ED92B /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5D9F2424279F003ED92B /* Driver.swift */; };
+		473B5DA2242427F7003ED92B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5DA1242427F7003ED92B /* Person.swift */; };
 		47EA14B82422EB9700C635D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EA14B72422EB9700C635D9 /* AppDelegate.swift */; };
 		47EA14BA2422EB9700C635D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EA14B92422EB9700C635D9 /* SceneDelegate.swift */; };
 		47EA14BC2422EB9700C635D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EA14BB2422EB9700C635D9 /* ViewController.swift */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		473B5D9A24242647003ED92B /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		473B5D9C24242692003ED92B /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		473B5D9F2424279F003ED92B /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		473B5DA1242427F7003ED92B /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		47EA14B42422EB9700C635D9 /* VehicleRentingSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VehicleRentingSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47EA14B72422EB9700C635D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47EA14B92422EB9700C635D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +54,15 @@
 			path = Vehicle;
 			sourceTree = "<group>";
 		};
+		473B5D9E24242789003ED92B /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				473B5D9F2424279F003ED92B /* Driver.swift */,
+				473B5DA1242427F7003ED92B /* Person.swift */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
 		47EA14AB2422EB9700C635D9 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +82,7 @@
 		47EA14B62422EB9700C635D9 /* VehicleRentingSystem */ = {
 			isa = PBXGroup;
 			children = (
+				473B5D9E24242789003ED92B /* Person */,
 				473B5D99242425B1003ED92B /* Vehicle */,
 				47EA14B72422EB9700C635D9 /* AppDelegate.swift */,
 				47EA14B92422EB9700C635D9 /* SceneDelegate.swift */,
@@ -155,6 +169,8 @@
 				47EA14BC2422EB9700C635D9 /* ViewController.swift in Sources */,
 				47EA14B82422EB9700C635D9 /* AppDelegate.swift in Sources */,
 				473B5D9B24242647003ED92B /* Car.swift in Sources */,
+				473B5DA02424279F003ED92B /* Driver.swift in Sources */,
+				473B5DA2242427F7003ED92B /* Person.swift in Sources */,
 				473B5D9D24242692003ED92B /* Vehicle.swift in Sources */,
 				47EA14BA2422EB9700C635D9 /* SceneDelegate.swift in Sources */,
 			);
