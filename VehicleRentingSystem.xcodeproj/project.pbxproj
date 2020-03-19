@@ -16,6 +16,7 @@
 		473B5DA824242947003ED92B /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5DA724242947003ED92B /* Bus.swift */; };
 		473B5DAA2424299B003ED92B /* MotorCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5DA92424299B003ED92B /* MotorCycle.swift */; };
 		473B5DAC24242CA6003ED92B /* VehicleRent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5DAB24242CA6003ED92B /* VehicleRent.swift */; };
+		473B5DB024242D90003ED92B /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5DAF24242D90003ED92B /* Date+Extension.swift */; };
 		47EA14B82422EB9700C635D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EA14B72422EB9700C635D9 /* AppDelegate.swift */; };
 		47EA14BA2422EB9700C635D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EA14B92422EB9700C635D9 /* SceneDelegate.swift */; };
 		47EA14BC2422EB9700C635D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EA14BB2422EB9700C635D9 /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 		473B5DA724242947003ED92B /* Bus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
 		473B5DA92424299B003ED92B /* MotorCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorCycle.swift; sourceTree = "<group>"; };
 		473B5DAB24242CA6003ED92B /* VehicleRent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleRent.swift; sourceTree = "<group>"; };
+		473B5DAF24242D90003ED92B /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		47EA14B42422EB9700C635D9 /* VehicleRentingSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VehicleRentingSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47EA14B72422EB9700C635D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47EA14B92422EB9700C635D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				473B5D9A24242647003ED92B /* Car.swift */,
-				473B5D9C24242692003ED92B /* Vehicle.swift */,
 				473B5DA724242947003ED92B /* Bus.swift */,
 				473B5DA92424299B003ED92B /* MotorCycle.swift */,
 			);
@@ -70,11 +71,27 @@
 			isa = PBXGroup;
 			children = (
 				473B5D9F2424279F003ED92B /* Driver.swift */,
-				473B5DA1242427F7003ED92B /* Person.swift */,
 				473B5DA324242870003ED92B /* Owner.swift */,
 				473B5DA5242428D6003ED92B /* Customer.swift */,
 			);
 			path = Person;
+			sourceTree = "<group>";
+		};
+		473B5DAD24242D1B003ED92B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				473B5D9C24242692003ED92B /* Vehicle.swift */,
+				473B5DA1242427F7003ED92B /* Person.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		473B5DAE24242D56003ED92B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				473B5DAF24242D90003ED92B /* Date+Extension.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		47EA14AB2422EB9700C635D9 = {
@@ -96,6 +113,8 @@
 		47EA14B62422EB9700C635D9 /* VehicleRentingSystem */ = {
 			isa = PBXGroup;
 			children = (
+				473B5DAE24242D56003ED92B /* Utility */,
+				473B5DAD24242D1B003ED92B /* Protocol */,
 				473B5D9E24242789003ED92B /* Person */,
 				473B5D99242425B1003ED92B /* Vehicle */,
 				47EA14B72422EB9700C635D9 /* AppDelegate.swift */,
@@ -183,6 +202,7 @@
 			files = (
 				47EA14BC2422EB9700C635D9 /* ViewController.swift in Sources */,
 				473B5DA424242870003ED92B /* Owner.swift in Sources */,
+				473B5DB024242D90003ED92B /* Date+Extension.swift in Sources */,
 				47EA14B82422EB9700C635D9 /* AppDelegate.swift in Sources */,
 				473B5D9B24242647003ED92B /* Car.swift in Sources */,
 				473B5DA824242947003ED92B /* Bus.swift in Sources */,
