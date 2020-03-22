@@ -16,6 +16,11 @@ class Customer: Person//, Codable
     
     var lastName: String
     
+    var fullName: String
+    {
+        return "\(firstName) \(lastName)"
+    }
+    
     var gender: Gender
     
     var mobileNumber: String
@@ -39,6 +44,8 @@ class Customer: Person//, Codable
     //lazy var customerDetails = [String : Customer]()
     
     lazy var vehicleListRented = [String : VehicleRent]()
+    
+    lazy var totalBillToPay = 0.0
     
     
     init(id:String, firstName: String, lastName: String, gender: Gender, mobileNumber: String, birthDate: Date, emailID: String, userName: String, password: String, address: String, city: String) //throws
@@ -65,6 +72,7 @@ class Customer: Person//, Codable
         self.city = city
         self.address = address
         self.city = city
+        
         if self.emailID?.isValidEmail() == true
            {
               
@@ -88,11 +96,16 @@ class Customer: Person//, Codable
     func addVehicleListRented(vehicleRented: VehicleRent, vehicleIdentificationNumber: String)
     {
         vehicleListRented.updateValue(vehicleRented, forKey: vehicleIdentificationNumber)
+        self.totalBillToPay = self.totalBillToPay + vehicleRented.totalBillToPay
     }
     
     func removeVehicleList(vehicleRented: VehicleRent, vehicleIdentificationNumber: String)
     {
         vehicleListRented.removeValue(forKey: vehicleIdentificationNumber)
+    }
+    
+    func getTotalBill()-> Double {
+        return self.totalBillToPay;
     }
     
 //    func Display()

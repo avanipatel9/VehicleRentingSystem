@@ -15,6 +15,11 @@ class Owner:Person//, Codable
     
     var lastName: String
     
+    var fullName: String
+    {
+        return "\(firstName) \(lastName)"
+    }
+    
     var gender: Gender
     
     var mobileNumber: String
@@ -36,9 +41,6 @@ class Owner:Person//, Codable
     var landlineNumber:String
     var website:String
     lazy var vehicleListOwned = [String:Vehicle]()
-    var fullName:String{
-        return "\(firstName) \(lastName)"
-    }
     
     
     

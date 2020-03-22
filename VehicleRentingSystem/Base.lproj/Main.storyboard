@@ -168,7 +168,7 @@
                     <view key="view" contentMode="scaleToFill" id="2P9-D9-7tF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.85374743509999995" green="0.99451300919999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="i7R-te-hNF"/>
                     </view>
                 </viewController>
@@ -183,13 +183,77 @@
                     <view key="view" contentMode="scaleToFill" id="DJH-fV-CFp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.85374743509999995" green="0.99451300919999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="dbm-KU-ZMc"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lGq-gD-2p1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4072" y="111"/>
+        </scene>
+        <!--Customer List View Controller-->
+        <scene sceneID="liL-4G-fss">
+            <objects>
+                <viewController storyboardIdentifier="CustomerListViewController" id="zkp-AX-hOG" customClass="CustomerListViewController" customModule="VehicleRentingSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="raW-Ai-BDH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4uh-rQ-asB">
+                                <rect key="frame" x="0.0" y="44" width="414" height="832"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomerTableViewCell" textLabel="VnJ-bU-1d4" detailTextLabel="yKq-hE-lZU" style="IBUITableViewCellStyleSubtitle" id="hh5-gW-6JZ" customClass="CustomerTableViewCell" customModule="VehicleRentingSystem" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hh5-gW-6JZ" id="hq2-Ae-a9t">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Customer Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VnJ-bU-1d4">
+                                                    <rect key="frame" x="20" y="10" width="124.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Total Bill Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yKq-hE-lZU">
+                                                    <rect key="frame" x="20" y="31.5" width="95.5" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblCustomerName" destination="VnJ-bU-1d4" id="b1e-Pc-04l"/>
+                                            <outlet property="lblTotalBill" destination="yKq-hE-lZU" id="TJf-11-U8O"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zkp-AX-hOG" id="e9M-2u-xvw"/>
+                                    <outlet property="delegate" destination="zkp-AX-hOG" id="fhU-mB-M5H"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4uh-rQ-asB" firstAttribute="leading" secondItem="YeC-XV-UHd" secondAttribute="leading" id="3hY-Ve-aXO"/>
+                            <constraint firstAttribute="bottom" secondItem="4uh-rQ-asB" secondAttribute="bottom" constant="20" symbolic="YES" id="Aig-oY-WyI"/>
+                            <constraint firstItem="4uh-rQ-asB" firstAttribute="trailing" secondItem="YeC-XV-UHd" secondAttribute="trailing" id="KhL-Ij-bdN"/>
+                            <constraint firstItem="4uh-rQ-asB" firstAttribute="top" secondItem="YeC-XV-UHd" secondAttribute="top" id="jsX-OO-p9R"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YeC-XV-UHd"/>
+                    </view>
+                    <connections>
+                        <outlet property="tblCustomers" destination="4uh-rQ-asB" id="rQy-qB-2oc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q9c-YQ-8vw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4766.666666666667" y="109.82142857142857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vM7-d0-3is">

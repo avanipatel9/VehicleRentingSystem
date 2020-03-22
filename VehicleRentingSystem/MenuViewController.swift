@@ -18,8 +18,6 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         tblViewMenu.delegate = self
         tblViewMenu.dataSource = self
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,6 +40,9 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         case "Home":
             let homeVC = sb.instantiateViewController(identifier: "HomeViewController") as HomeViewController
             self.navigationController?.pushViewController(homeVC, animated: true)
+        case "Customers":
+            let customersVC = sb.instantiateViewController(identifier: "CustomerListViewController") as CustomerListViewController
+            self.navigationController?.pushViewController(customersVC, animated: true)
         case "Contact Us":
             let contactUsVC = sb.instantiateViewController(identifier: "ContactUsViewController") as ContactUsViewController
             self.navigationController?.pushViewController(contactUsVC, animated: true)

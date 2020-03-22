@@ -15,6 +15,11 @@ class Driver:Person//, Codable
     
     var lastName: String
     
+    var fullName: String
+    {
+        return "\(firstName) \(lastName)"
+    }
+    
     var gender: Gender
     
     var mobileNumber: String
