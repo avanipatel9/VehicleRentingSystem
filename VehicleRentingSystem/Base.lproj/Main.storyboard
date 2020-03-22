@@ -47,6 +47,10 @@
                                 <rect key="frame" x="131" y="324" width="152" height="42"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="btnNextClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BjC-g1-Fjo"/>
+                                    <segue destination="2Au-kh-Iwx" kind="show" id="f3P-OM-Jj9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -69,10 +73,93 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="tFf-rv-xkF"/>
+                    <connections>
+                        <outlet property="switchRememberMe" destination="jlM-vH-uTX" id="7Ha-Ng-XEE"/>
+                        <outlet property="txtPassword" destination="tv8-zN-xJI" id="5kz-he-aB1"/>
+                        <outlet property="txtUserName" destination="QHs-cm-yRu" id="ZPV-hq-Xlt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="116.51785714285714"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="YCe-Hv-FGO">
+            <objects>
+                <viewController id="2Au-kh-Iwx" customClass="HomeViewController" customModule="VehicleRentingSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="laX-wu-ELo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.85374743509999995" green="0.99451300919999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="3Sr-y5-X9x"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="l6E-EF-4XF">
+                        <barButtonItem key="leftBarButtonItem" image="icons8-menu-24" id="egc-zb-hw7">
+                            <connections>
+                                <action selector="menuAction:" destination="2Au-kh-Iwx" id="p5t-i5-iDa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ziT-gg-yr9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1845" y="117"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="osB-cB-4rL">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewController" id="eWN-1h-iZ2" customClass="MenuViewController" customModule="VehicleRentingSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="huj-w1-119">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gEK-4t-O5o">
+                                <rect key="frame" x="0.0" y="74" width="314" height="802"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menuCell" id="uJ7-Ys-Sjc" customClass="MenuTableViewCell" customModule="VehicleRentingSystem" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="314" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uJ7-Ys-Sjc" id="boy-Rn-qBb">
+                                            <rect key="frame" x="0.0" y="0.0" width="314" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMh-3f-Ffw">
+                                                    <rect key="frame" x="20" y="11" width="282" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="HMh-3f-Ffw" secondAttribute="trailing" constant="12" id="5tj-TZ-iTa"/>
+                                                <constraint firstAttribute="bottom" secondItem="HMh-3f-Ffw" secondAttribute="bottom" constant="12" id="CDi-B9-dcE"/>
+                                                <constraint firstItem="HMh-3f-Ffw" firstAttribute="leading" secondItem="boy-Rn-qBb" secondAttribute="leading" constant="20" symbolic="YES" id="YDN-r2-QZI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblMenuTitle" destination="HMh-3f-Ffw" id="BbU-oU-Ti6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gEK-4t-O5o" firstAttribute="top" secondItem="g9B-7F-XB1" secondAttribute="top" constant="30" id="AhP-py-4Cy"/>
+                            <constraint firstItem="gEK-4t-O5o" firstAttribute="leading" secondItem="g9B-7F-XB1" secondAttribute="leading" id="S5H-TO-Puy"/>
+                            <constraint firstItem="g9B-7F-XB1" firstAttribute="trailing" secondItem="gEK-4t-O5o" secondAttribute="trailing" constant="100" id="bNG-Qv-cpf"/>
+                            <constraint firstAttribute="bottom" secondItem="gEK-4t-O5o" secondAttribute="bottom" constant="20" symbolic="YES" id="rpX-lg-jiv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g9B-7F-XB1"/>
+                    </view>
+                    <connections>
+                        <outlet property="tblViewMenu" destination="gEK-4t-O5o" id="C1V-HW-S3p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fUa-HJ-0mk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2602.898550724638" y="113.83928571428571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vM7-d0-3is">
@@ -93,4 +180,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-menu-24" width="24" height="24"/>
+    </resources>
 </document>
