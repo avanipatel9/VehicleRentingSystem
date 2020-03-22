@@ -12,6 +12,7 @@
 		47182AFD2426E790000DDAB5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47182AFC2426E790000DDAB5 /* HomeViewController.swift */; };
 		47182AFF2426E9B8000DDAB5 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47182AFE2426E9B8000DDAB5 /* MenuTableViewCell.swift */; };
 		47182B01242716F1000DDAB5 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47182B00242716F1000DDAB5 /* ContactUsViewController.swift */; };
+		47182B03242718CA000DDAB5 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47182B02242718CA000DDAB5 /* AboutUsViewController.swift */; };
 		473B5D9B24242647003ED92B /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5D9A24242647003ED92B /* Car.swift */; };
 		473B5D9D24242692003ED92B /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5D9C24242692003ED92B /* Vehicle.swift */; };
 		473B5DA02424279F003ED92B /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5D9F2424279F003ED92B /* Driver.swift */; };
@@ -37,6 +38,7 @@
 		47182AFC2426E790000DDAB5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		47182AFE2426E9B8000DDAB5 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		47182B00242716F1000DDAB5 /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		47182B02242718CA000DDAB5 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		473B5D9A24242647003ED92B /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		473B5D9C24242692003ED92B /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		473B5D9F2424279F003ED92B /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				47182AFC2426E790000DDAB5 /* HomeViewController.swift */,
 				47182AFE2426E9B8000DDAB5 /* MenuTableViewCell.swift */,
 				47182B00242716F1000DDAB5 /* ContactUsViewController.swift */,
+				47182B02242718CA000DDAB5 /* AboutUsViewController.swift */,
 			);
 			path = VehicleRentingSystem;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				473B5DA424242870003ED92B /* Owner.swift in Sources */,
 				473B5DB024242D90003ED92B /* Date+Extension.swift in Sources */,
 				47EA14B82422EB9700C635D9 /* AppDelegate.swift in Sources */,
+				47182B03242718CA000DDAB5 /* AboutUsViewController.swift in Sources */,
 				473B5D9B24242647003ED92B /* Car.swift in Sources */,
 				47182AFF2426E9B8000DDAB5 /* MenuTableViewCell.swift in Sources */,
 				473B5DA824242947003ED92B /* Bus.swift in Sources */,

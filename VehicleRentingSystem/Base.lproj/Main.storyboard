@@ -176,6 +176,21 @@
             </objects>
             <point key="canvasLocation" x="3359" y="112"/>
         </scene>
+        <!--About Us View Controller-->
+        <scene sceneID="AK8-8U-ImZ">
+            <objects>
+                <viewController storyboardIdentifier="AboutUsViewController" id="JRg-Ll-fnU" customClass="AboutUsViewController" customModule="VehicleRentingSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DJH-fV-CFp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="dbm-KU-ZMc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lGq-gD-2p1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4072" y="111"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="vM7-d0-3is">
             <objects>

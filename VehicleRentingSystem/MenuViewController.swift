@@ -43,8 +43,13 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let homeVC = sb.instantiateViewController(identifier: "HomeViewController") as HomeViewController
             self.navigationController?.pushViewController(homeVC, animated: true)
         case "Contact Us":
-            let contactUSVC = sb.instantiateViewController(identifier: "ContactUsViewController") as ContactUsViewController
-            self.navigationController?.pushViewController(contactUSVC, animated: true)
+            let contactUsVC = sb.instantiateViewController(identifier: "ContactUsViewController") as ContactUsViewController
+            self.navigationController?.pushViewController(contactUsVC, animated: true)
+        case "About Us":
+            let aboutUsVC = sb.instantiateViewController(identifier: "AboutUsViewController") as AboutUsViewController
+            self.navigationController?.pushViewController(aboutUsVC, animated: true)
+        case "Logout":
+            self.navigationController?.popToRootViewController(animated: true)
         default:
             break
         }
