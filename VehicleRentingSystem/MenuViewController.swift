@@ -10,7 +10,7 @@ import UIKit
 
 class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let menuTitlesArray = ["Home", "Contact Us", "About Us", "Logout"]
+    let menuTitlesArray = ["Home", "Customers", "Owners", "Vehicles", "Contact Us", "About Us", "Logout"]
     
     @IBOutlet weak var tblViewMenu: UITableView!
     override func viewDidLoad() {
