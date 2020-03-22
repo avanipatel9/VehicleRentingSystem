@@ -70,7 +70,11 @@ class LoginViewController: UIViewController {
                     }
                     //showing alert for empty fields
                     else{
-                        if self.txtUserName.text == ""
+                        if self.txtUserName.text == "" && txtPassword.text == ""
+                        {
+                            showAlert(message: "Username and Password cannot be empty")
+                        }
+                        else if self.txtUserName.text == ""
                         {
                             showAlert(message: "Please Enter Username")
                             return
