@@ -18,14 +18,14 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         tblViewMenu.delegate = self
         tblViewMenu.dataSource = self
-
+        
         
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuTitlesArray.count
     }
@@ -36,6 +36,18 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        switch menuTitlesArray[indexPath.row] {
+        case "Home":
+            let homeVC = sb.instantiateViewController(identifier: "HomeViewController") as HomeViewController
+            self.navigationController?.pushViewController(homeVC, animated: true)
+        case "Contact Us":
+            let contactUSVC = sb.instantiateViewController(identifier: "ContactUsViewController") as ContactUsViewController
+            self.navigationController?.pushViewController(contactUSVC, animated: true)
+        default:
+            break
+        }
+    }
     
 }

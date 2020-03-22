@@ -86,7 +86,7 @@
         <!--Home-->
         <scene sceneID="YCe-Hv-FGO">
             <objects>
-                <viewController id="2Au-kh-Iwx" customClass="HomeViewController" customModule="VehicleRentingSystem" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="2Au-kh-Iwx" customClass="HomeViewController" customModule="VehicleRentingSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="laX-wu-ELo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,6 +160,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUa-HJ-0mk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2602.898550724638" y="113.83928571428571"/>
+        </scene>
+        <!--Contact Us View Controller-->
+        <scene sceneID="6hP-8c-Vf6">
+            <objects>
+                <viewController storyboardIdentifier="ContactUsViewController" id="Utq-NQ-B9v" customClass="ContactUsViewController" customModule="VehicleRentingSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2P9-D9-7tF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="i7R-te-hNF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bUn-W0-tC5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3359" y="112"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vM7-d0-3is">
