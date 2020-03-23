@@ -9,6 +9,17 @@
 import Foundation
 extension String
 {
+    func toDate(withFormat format: String = "MMM dd, yyyy") -> Date
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        guard let date = dateFormatter.date(from: self) else
+        {
+            preconditionFailure("Take a look to your format")
+        }
+        return date
+    }
+    
     func isValidEmail() -> Bool
     {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"

@@ -65,33 +65,14 @@ class Customer: Person//, Codable
        // self.mobileNumber = mobileNumber
         self.birthDate = birthDate
         
-       // self.emailID = emailID
+        self.emailID = emailID
         self.userName = userName
         self.password = password
         self.address = address
         self.city = city
         self.address = address
         self.city = city
-        
-        if self.emailID?.isValidEmail() == true
-           {
-              
-               self.emailID=emailID
-           }
-            else
-            {
-                print("Invalid Email ID for \(self.firstName) : \(emailID) ")
-//                throw CustomException.invalidEmail
-        
-            }
     }
-    
-//    func isEmailValid(email:String)  -> Bool {
-//        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-//
-//        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-//        return emailTest.evaluate(with: email)
-//    }
     
     func addVehicleListRented(vehicleRented: VehicleRent, vehicleIdentificationNumber: String)
     {

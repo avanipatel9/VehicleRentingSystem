@@ -15,7 +15,8 @@ class CustomerListViewController: UIViewController {
     var totalBillToPay = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.hidesBackButton = true
+        //self.navigationItem.hidesBackButton = true
+        self.addNewCustomerButton()
         self.navigationItem.title = "Customer List"
         customers = DataStorage.getInstance().getAllCustomers()
 
@@ -25,6 +26,18 @@ class CustomerListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         customers = DataStorage.getInstance().getAllCustomers()
         tblCustomers.reloadData()
+    }
+    
+    private func addNewCustomerButton()
+    {
+        let newCustomerButton = UIBarButtonItem(title: "Add Customer", style: .plain, target: self, action: #selector(self.addNewCustomer))
+        self.navigationItem.rightBarButtonItem = newCustomerButton
+    }
+    @objc func addNewCustomer()
+    {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let addNewCustomerVC = sb.instantiateViewController(identifier: "AddNewCustomerViewController") as! AddNewCustomerViewController
+        navigationController?.pushViewController(addNewCustomerVC, animated: true)
     }
 }
 
