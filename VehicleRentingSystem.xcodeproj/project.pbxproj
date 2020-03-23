@@ -83,6 +83,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4719A5C52428756200C2BDA7 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				47EA14BB2422EB9700C635D9 /* LoginViewController.swift */,
+				47182AF82426D35A000DDAB5 /* MenuViewController.swift */,
+				47182AFC2426E790000DDAB5 /* HomeViewController.swift */,
+				47182B00242716F1000DDAB5 /* ContactUsViewController.swift */,
+				47182B02242718CA000DDAB5 /* AboutUsViewController.swift */,
+				4719A5BB2427C9A300C2BDA7 /* CustomerListViewController.swift */,
+				4719A5BF2427D65500C2BDA7 /* AddNewCustomerViewController.swift */,
+				4719A5C3242800CB00C2BDA7 /* OwnerListViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		4719A5C62428761100C2BDA7 /* Structure */ = {
+			isa = PBXGroup;
+			children = (
+				473B5DAB24242CA6003ED92B /* VehicleRent.swift */,
+			);
+			path = Structure;
+			sourceTree = "<group>";
+		};
+		4719A5C72428762600C2BDA7 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				47182AFE2426E9B8000DDAB5 /* MenuTableViewCell.swift */,
+				4719A5BD2427CE0E00C2BDA7 /* CustomerTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		473B5D99242425B1003ED92B /* Vehicle */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +147,8 @@
 		473B5DAE24242D56003ED92B /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				47182AF42426BCC1000DDAB5 /* Admin.plist */,
+				47182B0424271FF8000DDAB5 /* DataStorage.swift */,
 				4719A5C12427D6DE00C2BDA7 /* Validation.swift */,
 				473B5DAF24242D90003ED92B /* Date+Extension.swift */,
 				473B5DB124242DEE003ED92B /* String+Extension.swift */,
@@ -141,29 +175,19 @@
 		47EA14B62422EB9700C635D9 /* VehicleRentingSystem */ = {
 			isa = PBXGroup;
 			children = (
+				4719A5C72428762600C2BDA7 /* TableViewCell */,
+				4719A5C62428761100C2BDA7 /* Structure */,
+				4719A5C52428756200C2BDA7 /* View Controller */,
 				473B5DAE24242D56003ED92B /* Utility */,
 				473B5DAD24242D1B003ED92B /* Protocol */,
 				473B5D9E24242789003ED92B /* Person */,
 				473B5D99242425B1003ED92B /* Vehicle */,
 				47EA14B72422EB9700C635D9 /* AppDelegate.swift */,
 				47EA14B92422EB9700C635D9 /* SceneDelegate.swift */,
-				47EA14BB2422EB9700C635D9 /* LoginViewController.swift */,
 				47EA14BD2422EB9700C635D9 /* Main.storyboard */,
-				4719A5BD2427CE0E00C2BDA7 /* CustomerTableViewCell.swift */,
-				47182AF82426D35A000DDAB5 /* MenuViewController.swift */,
 				47EA14C02422EB9B00C635D9 /* Assets.xcassets */,
 				47EA14C22422EB9B00C635D9 /* LaunchScreen.storyboard */,
 				47EA14C52422EB9B00C635D9 /* Info.plist */,
-				473B5DAB24242CA6003ED92B /* VehicleRent.swift */,
-				47182AF42426BCC1000DDAB5 /* Admin.plist */,
-				47182AFC2426E790000DDAB5 /* HomeViewController.swift */,
-				47182AFE2426E9B8000DDAB5 /* MenuTableViewCell.swift */,
-				47182B00242716F1000DDAB5 /* ContactUsViewController.swift */,
-				47182B02242718CA000DDAB5 /* AboutUsViewController.swift */,
-				47182B0424271FF8000DDAB5 /* DataStorage.swift */,
-				4719A5BB2427C9A300C2BDA7 /* CustomerListViewController.swift */,
-				4719A5BF2427D65500C2BDA7 /* AddNewCustomerViewController.swift */,
-				4719A5C3242800CB00C2BDA7 /* OwnerListViewController.swift */,
 			);
 			path = VehicleRentingSystem;
 			sourceTree = "<group>";
