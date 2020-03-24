@@ -1,46 +1,41 @@
 //
-//  AddNewCustomerViewController.swift
+//  AddNewOwnerViewController.swift
 //  VehicleRentingSystem
 //
-//  Created by Avani Patel on 3/22/20.
+//  Created by Avani Patel on 3/23/20.
 //  Copyright © 2020 Avani Patel. All rights reserved.
 //
 
 import UIKit
 
-class AddNewCustomerViewController: UIViewController, UITextFieldDelegate {
-    
-    @IBOutlet weak var mainViewNewCustomer: UIView!
-    @IBOutlet weak var scrollViewNewCustomer: UIScrollView!
+class AddNewOwnerViewController: UIViewController,UITextFieldDelegate {
+
     var validation = Validation()
     var datePicker : UIDatePicker!
     var genderPicker : UIPickerView!
-    @IBOutlet weak var txtCustomerID: UITextField!
-    @IBOutlet weak var txtFirstName: UITextField!
-    @IBOutlet weak var txtLastName: UITextField!
-    @IBOutlet weak var txtGender: UITextField!
-    @IBOutlet weak var txtMobile: UITextField!
-    @IBOutlet weak var txtBirthDate: UITextField!
-    @IBOutlet weak var txtEmail: UITextField!
-    @IBOutlet weak var txtUserName: UITextField!
-    @IBOutlet weak var txtPassword: UITextField!
-    @IBOutlet weak var txtAddress: UITextField!
-    @IBOutlet weak var txtCity: UITextField!
-    
-//    var genders:[String] = [String]()
+    @IBOutlet weak var txtOwnerID: UITextField!
+    @IBOutlet weak var txtOwnerFirstName: UITextField!
+    @IBOutlet weak var txtOwnerLastName: UITextField!
+    @IBOutlet weak var txtOwnerGender: UITextField!
+    @IBOutlet weak var txtOwnerMobileNo: UITextField!
+    @IBOutlet weak var txtOwnerBirthDate: UITextField!
+    @IBOutlet weak var txtOwnerEmail: UITextField!
+    @IBOutlet weak var txtOwnerUsername: UITextField!
+    @IBOutlet weak var txtOwnerPassword: UITextField!
+    @IBOutlet weak var txtCompanyTitle: UITextField!
+    @IBOutlet weak var txtLandlineNo: UITextField!
+    @IBOutlet weak var txtWebsite: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.saveNewCustomerButton()
-        txtBirthDate.delegate = self
-        txtGender.delegate = self
-        
-        
+        self.saveNewOwnerButton()
+        txtOwnerGender.delegate = self
+        txtOwnerBirthDate.delegate = self
     }
     
-    
+
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        self.pickUpDate(self.txtBirthDate)
-        self.pickUpGender(self.txtGender)
+        self.pickUpDate(self.txtOwnerBirthDate)
+        self.pickUpGender(self.txtOwnerGender)
     }
     
     func pickUpGender(_ textField: UITextField)
@@ -69,13 +64,13 @@ class AddNewCustomerViewController: UIViewController, UITextFieldDelegate {
     
     @objc func doneClickPicker()
     {
-        txtGender.text = Gender.AllCases[genderPicker.selectedRow(inComponent: 0)];
-        txtGender.resignFirstResponder()
+        txtOwnerGender.text = Gender.AllCases[genderPicker.selectedRow(inComponent: 0)];
+        txtOwnerGender.resignFirstResponder()
     }
     
     @objc func cancelClickPicker()
     {
-        txtGender.resignFirstResponder()
+        txtOwnerGender.resignFirstResponder()
     }
     
     func pickUpDate(_ textField: UITextField)
@@ -108,123 +103,133 @@ class AddNewCustomerViewController: UIViewController, UITextFieldDelegate {
         let dateformatter1 = DateFormatter()
         dateformatter1.dateStyle = .medium
         dateformatter1.timeStyle = .none
-        txtBirthDate.text = dateformatter1.string(from: datePicker.date)
-        txtBirthDate.resignFirstResponder()
+        txtOwnerBirthDate.text = dateformatter1.string(from: datePicker.date)
+        txtOwnerBirthDate.resignFirstResponder()
     }
     
     @objc func cancelClick()
     {
-        txtBirthDate.resignFirstResponder()
+        txtOwnerBirthDate.resignFirstResponder()
     }
     
-    private func saveNewCustomerButton()
+    private func saveNewOwnerButton()
     {
-        let saveNewCustomerButton = UIBarButtonItem(title: "Save Customer", style: .plain, target: self, action: #selector(self.saveNewCustomer))
-        self.navigationItem.rightBarButtonItem = saveNewCustomerButton
+        let saveNewOwnerButton = UIBarButtonItem(title: "Save Owner", style: .plain, target: self, action: #selector(self.saveNewOwner))
+        self.navigationItem.rightBarButtonItem = saveNewOwnerButton
     }
-    @objc func saveNewCustomer()
+    @objc func saveNewOwner()
     {
-        var validatedCustomerEmail = String()
+        //        let sb = UIStoryboard(name: "Main", bundle: nil)
+        //        let addNewCustomerVC = sb.instantiateViewController(identifier: "AddNewCustomerViewController") as! AddNewCustomerViewController
+        //        navigationController?.pushViewController(addNewCustomerVC, animated: true)
         
-        guard let newCustomerID = txtCustomerID.text else {return}
-        guard let newCustomerFirstName = txtFirstName.text else {return}
-        guard let newCustomerLastName = txtLastName.text else {return}
-        guard let newCustomerGender = txtGender.text else {return}
-        guard let newCustomerMobile = txtMobile.text else {return}
-        guard let newCustomerBirthDate = txtBirthDate.text else {return}
-        guard let newCustomerEmail = txtEmail.text else {return}
-        guard let newCustomerUserName = txtUserName.text else {return}
-        guard let newCustomerPassword = txtPassword.text else {return}
-        guard let newCustomerAddress = txtAddress.text else {return}
-        guard let newCustomerCity = txtCity.text else {return}
+        var validatedOwnerEmail = String()
+        
+        guard let newOwnerID = txtOwnerID.text else {return}
+        guard let newOwnerFirstName = txtOwnerFirstName.text else {return}
+        guard let newOwnerLastName = txtOwnerLastName.text else {return}
+        guard let newOwnerGender = txtOwnerGender.text else {return}
+        guard let newOwnerMobileNo = txtOwnerMobileNo.text else {return}
+        guard let newOwnerBirthDate = txtOwnerBirthDate.text else {return}
+        guard let newOwnerEmail = txtOwnerEmail.text else {return}
+        guard let newOwnerUserName = txtOwnerUsername.text else {return}
+        guard let newOwnerPassword = txtOwnerPassword.text else {return}
+        guard let newCompanyTitle = txtCompanyTitle.text else {return}
+        guard let newLandLineNo = txtLandlineNo.text else {return}
+        guard let newWebsite = txtWebsite.text else {return}
         
         //validating empty fields and showing alert for it
-        if newCustomerID == "" && newCustomerFirstName == "" && newCustomerLastName == "" && newCustomerGender == "" && newCustomerMobile == "" && newCustomerBirthDate == "" && newCustomerEmail == "" && newCustomerUserName == "" && newCustomerPassword == "" && newCustomerAddress == "" && newCustomerCity == ""
+        if newOwnerID == "" && newOwnerFirstName == "" && newOwnerLastName == "" && newOwnerGender == "" && newOwnerMobileNo == "" && newOwnerBirthDate == "" && newOwnerEmail == "" && newOwnerUserName == "" && newOwnerPassword == "" && newCompanyTitle == "" && newLandLineNo == "" && newWebsite == ""
         {
             showAlert(message: "Please Enter all fields")
             return
         }
-        else if  newCustomerID == ""
+        else if  newOwnerID == ""
         {
             showAlert(message: "Please Enter Customer ID")
             return
         }
-        else if newCustomerFirstName == ""
+        else if newOwnerFirstName == ""
         {
             showAlert(message: "Please Enter First Name")
             return
         }
-        else if newCustomerLastName == ""
+        else if newOwnerLastName == ""
         {
             showAlert(message: "Please Enter Last Name")
             return
         }
-        else if newCustomerGender == ""
+        else if newOwnerGender == ""
         {
             showAlert(message: "Please Enter Gender")
             return
         }
-        else if newCustomerMobile == ""
+        else if newOwnerMobileNo == ""
         {
             showAlert(message: "Please Enter Mobile No.")
             return
         }
-        else if newCustomerBirthDate == ""
+        else if newOwnerBirthDate == ""
         {
             showAlert(message: "Please Enter Birth Date")
         }
-        else if newCustomerEmail == ""
+        else if newOwnerEmail == ""
         {
             showAlert(message: "Please Enter Email")
             return
         }
-        else if newCustomerUserName == ""
+        else if newOwnerUserName == ""
         {
             showAlert(message: "Please Enter UserName")
             return
         }
-        else if newCustomerPassword == ""
+        else if newOwnerPassword == ""
         {
             showAlert(message: "Please Enter Password")
             return
         }
-        else if newCustomerAddress == ""
+        else if newCompanyTitle == ""
         {
-            showAlert(message: "Please Enter Address")
+            showAlert(message: "Please Enter Company Name")
             return
         }
-        else if newCustomerCity == ""
+        else if newLandLineNo == ""
         {
-            showAlert(message: "Please Enter City")
+            showAlert(message: "Please Enter Landline Number")
+            return
+        }
+        else if newWebsite == ""
+        {
+            showAlert(message: "Please Enter Website")
             return
         }
             
             // adding new customer
         else
         {
-            if self.validation.isValidEmail(email: newCustomerEmail) == false
+            if self.validation.isValidEmail(email: newOwnerEmail) == false
             {
                 showAlert(message: "Invalid Email ID")
                 return
             }
             else
             {
-                validatedCustomerEmail = newCustomerEmail
+                validatedOwnerEmail = newOwnerEmail
             }
             
             var tempGender:Gender
             
-            if newCustomerGender == "Male"{
+            if newOwnerGender == "Male"{
                 tempGender = .Male
             }
-            else if newCustomerGender == "Female"{
+            else if newOwnerGender == "Female"{
                 tempGender = .Female
             }
             else{
                 tempGender = .Other
             }
             
-            DataStorage.getInstance().addCustomer(customer: Customer(id: newCustomerID, firstName: newCustomerFirstName, lastName: newCustomerLastName, gender: tempGender, mobileNumber: newCustomerMobile, birthDate: newCustomerBirthDate.toDate(), emailID: validatedCustomerEmail, userName: newCustomerUserName, password: newCustomerPassword, address: newCustomerAddress, city: newCustomerCity))
+            DataStorage.getInstance().addOwner(owner: Owner(id: newOwnerID, firstName: newOwnerFirstName, lastName: newOwnerLastName, gender: tempGender, mobileNumber: newOwnerMobileNo, birthDate: newOwnerBirthDate.toDate(), emailID: validatedOwnerEmail, userName: newOwnerUserName, password: newOwnerPassword, companyTitle: newCompanyTitle, landlineNumber: newLandLineNo, website: newWebsite))
             navigationController?.popViewController(animated: true)
         }
     }
@@ -240,14 +245,10 @@ class AddNewCustomerViewController: UIViewController, UITextFieldDelegate {
         alert.addAction(okButton)
         self.present(alert, animated: true)
     }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
+
 }
 
-extension AddNewCustomerViewController:UIPickerViewDelegate, UIPickerViewDataSource{
+extension AddNewOwnerViewController:UIPickerViewDelegate, UIPickerViewDataSource{
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1;
     }

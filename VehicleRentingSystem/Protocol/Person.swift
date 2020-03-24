@@ -7,9 +7,13 @@
 //
 
 import Foundation
-enum Gender: String//, Codable
+enum Gender: String
 {
-    case Male, Female, Other
+    case Male="Male", Female="Female", Other="Other"
+    
+    static var AllCases :[String]{
+        return ["\(Gender.Male)","\(Gender.Female)","\(Gender.Other)"]
+    }
 }
 
 protocol Person

@@ -10,21 +10,50 @@ import UIKit
 
 class OwnerListViewController: UIViewController {
 
+    @IBOutlet weak var tblOwners: UITableView!
+    var owners : [Owner] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.navigationItem.title = "Owner List"
+        addNewOwnerButton()
+        owners = DataStorage.getInstance().getAllOwners()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+         owners = DataStorage.getInstance().getAllOwners()
+        tblOwners.reloadData()
     }
-    */
+    
+    private func addNewOwnerButton()
+    {
+        let newOwnerButton = UIBarButtonItem(title: "Add Owner", style: .plain, target: self, action: #selector(self.addNewOwner))
+        self.navigationItem.rightBarButtonItem = newOwnerButton
+    }
+    @objc func addNewOwner()
+    {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let addNewOwnerVC = sb.instantiateViewController(identifier: "AddNewOwnerViewController") as! AddNewOwnerViewController
+        navigationController?.pushViewController(addNewOwnerVC, animated: true)
+    }
+    
+}
 
+extension OwnerListViewController: UITableViewDataSource, UITableViewDelegate
+{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return owners.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OwnerTableViewCell") as! OwnerTableViewCell
+        let owner = owners[indexPath.row]
+        cell.lblOwnerName.text = owner.fullName
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    
 }

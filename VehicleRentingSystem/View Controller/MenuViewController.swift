@@ -43,6 +43,9 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         case "Customers":
             let customersVC = sb.instantiateViewController(identifier: "CustomerListViewController") as CustomerListViewController
             self.navigationController?.pushViewController(customersVC, animated: true)
+        case "Owners":
+            let ownersVC = sb.instantiateViewController(identifier: "OwnerListViewController") as OwnerListViewController
+            self.navigationController?.pushViewController(ownersVC, animated: true)
         case "Contact Us":
             let contactUsVC = sb.instantiateViewController(identifier: "ContactUsViewController") as ContactUsViewController
             self.navigationController?.pushViewController(contactUsVC, animated: true)

@@ -19,6 +19,7 @@ class CustomerListViewController: UIViewController {
         self.addNewCustomerButton()
         self.navigationItem.title = "Customer List"
         customers = DataStorage.getInstance().getAllCustomers()
+        
 
         // Do any additional setup after loading the view.
     }

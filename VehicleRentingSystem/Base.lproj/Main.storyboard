@@ -473,10 +473,10 @@
             </objects>
             <point key="canvasLocation" x="4767" y="-616"/>
         </scene>
-        <!--View Controller-->
+        <!--Add New Owner View Controller-->
         <scene sceneID="S9l-As-aSJ">
             <objects>
-                <viewController id="v2O-Bi-2jZ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddNewOwnerViewController" id="v2O-Bi-2jZ" customClass="AddNewOwnerViewController" customModule="VehicleRentingSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YPV-hL-Zt8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -646,10 +646,39 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qba-eQ-wpH"/>
                     </view>
+                    <connections>
+                        <outlet property="txtCompanyTitle" destination="MyY-hA-fbE" id="BLd-a9-64W"/>
+                        <outlet property="txtLandlineNo" destination="KWs-f1-x9l" id="Gg3-LR-Ip1"/>
+                        <outlet property="txtOwnerBirthDate" destination="vER-SG-z0P" id="BID-dU-lDd"/>
+                        <outlet property="txtOwnerEmail" destination="Mya-pw-8HO" id="gJg-Mn-jf9"/>
+                        <outlet property="txtOwnerFirstName" destination="vwa-Sy-beg" id="tgL-Ov-qQq"/>
+                        <outlet property="txtOwnerGender" destination="WiT-mz-wKJ" id="VwN-WX-Bzz"/>
+                        <outlet property="txtOwnerID" destination="0VN-GZ-bAG" id="n4m-Vd-Qsu"/>
+                        <outlet property="txtOwnerLastName" destination="dMH-go-1br" id="w4Z-jA-fx7"/>
+                        <outlet property="txtOwnerMobileNo" destination="O8n-mK-Qey" id="3dX-gB-37y"/>
+                        <outlet property="txtOwnerPassword" destination="xyG-2w-CTK" id="yRN-ax-icN"/>
+                        <outlet property="txtOwnerUsername" destination="Cjd-He-UfB" id="zvQ-AQ-34P"/>
+                        <outlet property="txtWebsite" destination="ksj-QY-UME" id="Hvi-hu-167"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nba-x5-FMQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5542.0289855072469" y="-616.07142857142856"/>
+            <point key="canvasLocation" x="5543" y="-616"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nng-u1-X1f">
+            <objects>
+                <viewController id="1ur-HX-BJL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qkp-Ai-rKf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="zxm-vc-83u"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f6a-wR-cuu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6231" y="-617"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vM7-d0-3is">
@@ -681,14 +710,14 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="832"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="71" id="Ksd-v1-XAJ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OwnerTableViewCell" rowHeight="71" id="Ksd-v1-XAJ" customClass="OwnerTableViewCell" customModule="VehicleRentingSystem" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="71"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ksd-v1-XAJ" id="qJ7-L6-I7N">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHA-Kq-HBl">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHA-Kq-HBl">
                                                     <rect key="frame" x="20" y="20" width="374" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="CdC-XW-xRu"/>
@@ -701,11 +730,19 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="GHA-Kq-HBl" secondAttribute="trailing" constant="20" id="0dA-nI-g1F"/>
                                                 <constraint firstItem="GHA-Kq-HBl" firstAttribute="leading" secondItem="qJ7-L6-I7N" secondAttribute="leading" constant="20" id="d4f-so-GiO"/>
+                                                <constraint firstAttribute="bottom" secondItem="GHA-Kq-HBl" secondAttribute="bottom" constant="11" id="gjv-fy-bVq"/>
                                                 <constraint firstItem="GHA-Kq-HBl" firstAttribute="top" secondItem="qJ7-L6-I7N" secondAttribute="top" constant="20" symbolic="YES" id="xmD-3B-Kfd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblOwnerName" destination="GHA-Kq-HBl" id="qGS-Mw-rSv"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="pNg-qn-6bS" id="zzx-2F-Ej6"/>
+                                    <outlet property="delegate" destination="pNg-qn-6bS" id="skq-H8-xaz"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -717,6 +754,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qrs-Hs-Ghr"/>
                     </view>
+                    <connections>
+                        <outlet property="tblOwners" destination="aDV-Dc-X2A" id="G2N-rO-KjT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNi-Hz-Cdd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

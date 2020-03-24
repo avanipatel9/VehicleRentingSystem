@@ -19,6 +19,8 @@
 		4719A5C02427D65500C2BDA7 /* AddNewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4719A5BF2427D65500C2BDA7 /* AddNewCustomerViewController.swift */; };
 		4719A5C22427D6DE00C2BDA7 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4719A5C12427D6DE00C2BDA7 /* Validation.swift */; };
 		4719A5C4242800CB00C2BDA7 /* OwnerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4719A5C3242800CB00C2BDA7 /* OwnerListViewController.swift */; };
+		4719A5C92428775000C2BDA7 /* AddNewOwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4719A5C82428775000C2BDA7 /* AddNewOwnerViewController.swift */; };
+		471B152C24292FF100862807 /* OwnerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471B152B24292FF100862807 /* OwnerTableViewCell.swift */; };
 		473B5D9B24242647003ED92B /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5D9A24242647003ED92B /* Car.swift */; };
 		473B5D9D24242692003ED92B /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5D9C24242692003ED92B /* Vehicle.swift */; };
 		473B5DA02424279F003ED92B /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5D9F2424279F003ED92B /* Driver.swift */; };
@@ -51,6 +53,8 @@
 		4719A5BF2427D65500C2BDA7 /* AddNewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCustomerViewController.swift; sourceTree = "<group>"; };
 		4719A5C12427D6DE00C2BDA7 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		4719A5C3242800CB00C2BDA7 /* OwnerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerListViewController.swift; sourceTree = "<group>"; };
+		4719A5C82428775000C2BDA7 /* AddNewOwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewOwnerViewController.swift; sourceTree = "<group>"; };
+		471B152B24292FF100862807 /* OwnerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerTableViewCell.swift; sourceTree = "<group>"; };
 		473B5D9A24242647003ED92B /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		473B5D9C24242692003ED92B /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		473B5D9F2424279F003ED92B /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 				4719A5BB2427C9A300C2BDA7 /* CustomerListViewController.swift */,
 				4719A5BF2427D65500C2BDA7 /* AddNewCustomerViewController.swift */,
 				4719A5C3242800CB00C2BDA7 /* OwnerListViewController.swift */,
+				4719A5C82428775000C2BDA7 /* AddNewOwnerViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				47EA14C02422EB9B00C635D9 /* Assets.xcassets */,
 				47EA14C22422EB9B00C635D9 /* LaunchScreen.storyboard */,
 				47EA14C52422EB9B00C635D9 /* Info.plist */,
+				471B152B24292FF100862807 /* OwnerTableViewCell.swift */,
 			);
 			path = VehicleRentingSystem;
 			sourceTree = "<group>";
@@ -275,6 +281,7 @@
 				473B5DA824242947003ED92B /* Bus.swift in Sources */,
 				47182AF92426D35A000DDAB5 /* MenuViewController.swift in Sources */,
 				473B5DAC24242CA6003ED92B /* VehicleRent.swift in Sources */,
+				471B152C24292FF100862807 /* OwnerTableViewCell.swift in Sources */,
 				4719A5C02427D65500C2BDA7 /* AddNewCustomerViewController.swift in Sources */,
 				4719A5C4242800CB00C2BDA7 /* OwnerListViewController.swift in Sources */,
 				473B5DA02424279F003ED92B /* Driver.swift in Sources */,
@@ -285,6 +292,7 @@
 				473B5D9D24242692003ED92B /* Vehicle.swift in Sources */,
 				4719A5BE2427CE0E00C2BDA7 /* CustomerTableViewCell.swift in Sources */,
 				47EA14BA2422EB9700C635D9 /* SceneDelegate.swift in Sources */,
+				4719A5C92428775000C2BDA7 /* AddNewOwnerViewController.swift in Sources */,
 				473B5DAA2424299B003ED92B /* MotorCycle.swift in Sources */,
 				4719A5BC2427C9A300C2BDA7 /* CustomerListViewController.swift in Sources */,
 				4719A5C22427D6DE00C2BDA7 /* Validation.swift in Sources */,

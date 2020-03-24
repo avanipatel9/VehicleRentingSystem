@@ -41,7 +41,7 @@ class Driver:Person//, Codable
     var isHistroyCleared : Bool
     var salary : Double
     
-    init(id: String, firstName: String, lastName: String, gender: Gender, mobileNumber: String, birthDate: Date, emailID: String, userName: String, password: String, drivingLicenceNumber: String, isHistroyCleared: Bool, salary: Double) throws
+    init(id: String, firstName: String, lastName: String, gender: Gender, mobileNumber: String, birthDate: Date, emailID: String, userName: String, password: String, drivingLicenceNumber: String, isHistroyCleared: Bool, salary: Double)
     {
         self.id = id
         self.firstName = firstName
@@ -54,35 +54,21 @@ class Driver:Person//, Codable
             
         }
         self.mobileNumber=mobileNumber
-        //self.mobileNumber = mobileNumber
         self.birthDate = birthDate
-       
-        //self.emailID = emailID
+        self.emailID = emailID
         self.userName = userName
         self.password = password
-        //self.age = Calendar.current.dateComponents([.year], from: birthDate,to: Date()).year!
         self.drivingLicenceNumber = drivingLicenceNumber
         self.isHistroyCleared = isHistroyCleared
         self.salary = salary
-        if isEmailValid(email: emailID)
-                  {
-                     
-                      self.emailID=emailID
-                  }
-                   else
-                   {
-                       print("Invalid Email ID for \(self.firstName) : \(emailID) ")
-//                       throw CustomException.invalidEmail
-               
-                   }
     }
     
-    func isEmailValid(email:String)  -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with: email)
-    }
+//    func isEmailValid(email:String)  -> Bool {
+//        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+//
+//        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+//        return emailTest.evaluate(with: email)
+//    }
     
 //    func Display() {
 //        print("\t-----------------------------------------------")
