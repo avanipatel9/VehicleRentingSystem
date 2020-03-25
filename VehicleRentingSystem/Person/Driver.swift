@@ -47,12 +47,6 @@ class Driver:Person//, Codable
         self.firstName = firstName
         self.lastName = lastName
         self.gender = gender
-        if mobileNumber.count != 10
-        {
-          print("Name :- \(firstName) has  Invalid Mobile Number \(mobileNumber) : Cannot be less than 10 digits")
-//            throw  CustomException.invalidNumber
-            
-        }
         self.mobileNumber=mobileNumber
         self.birthDate = birthDate
         self.emailID = emailID

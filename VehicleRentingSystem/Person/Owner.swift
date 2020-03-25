@@ -50,32 +50,14 @@ class Owner:Person//, Codable
         self.firstName = firstName
         self.lastName = lastName
         self.gender = gender
-        if mobileNumber.count != 10
-        {
-          print("Name :- \(firstName) has Invalid Mobile Number \(mobileNumber) : Cannot be less than 10 digits")
-//            throw  CustomException.invalidNumber
-            
-        }
         self.mobileNumber = mobileNumber
         self.birthDate = birthDate
-        //self.emailID = emailID
+        self.emailID = emailID
         self.userName = userName
         self.password = password
         self.companyTitle=companyTitle
         self.landlineNumber=landlineNumber
         self.website=website
-        if isEmailValid(email: emailID)
-                  {
-                     
-                      self.emailID=emailID
-                  }
-                   else
-                   {
-                       print("Invalid Email ID for \(self.firstName) : \(emailID) ")
-//                       throw CustomException.invalidEmail
-               
-                   }
-        
     }
     
     func addVehicleOwned(id:String,vehicle:Vehicle)
@@ -83,13 +65,6 @@ class Owner:Person//, Codable
         self.vehicleListOwned.updateValue(vehicle, forKey: id)
         
     }
-    
-    func isEmailValid(email:String)  -> Bool {
-           let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-           
-           let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-           return emailTest.evaluate(with: email)
-       }
        
     
 //    func Display() {
