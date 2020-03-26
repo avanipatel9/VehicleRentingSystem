@@ -175,5 +175,6 @@ class DataStorage
         motorCycleList.updateValue(m3, forKey: m3.vehicleIdentificationNumber)
         motorCycleList.updateValue(m4, forKey: m4.vehicleIdentificationNumber)
         motorCycleList.updateValue(m5, forKey: m5.vehicleIdentificationNumber)
+        
     }
 }

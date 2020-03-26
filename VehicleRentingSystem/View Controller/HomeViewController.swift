@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        menuVC = self.storyboard?.instantiateViewController(identifier: "MenuViewController") as! MenuViewController
+        menuVC = (self.storyboard?.instantiateViewController(identifier: "MenuViewController"))! as MenuViewController
         
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToGesture))
         swipeRight.direction = UISwipeGestureRecognizer.Direction.right

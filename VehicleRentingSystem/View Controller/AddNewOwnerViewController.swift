@@ -25,6 +25,7 @@ class AddNewOwnerViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var txtCompanyTitle: UITextField!
     @IBOutlet weak var txtLandlineNo: UITextField!
     @IBOutlet weak var txtWebsite: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.saveNewOwnerButton()

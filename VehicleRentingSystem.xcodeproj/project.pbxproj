@@ -32,6 +32,9 @@
 		473B5DAC24242CA6003ED92B /* VehicleRent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5DAB24242CA6003ED92B /* VehicleRent.swift */; };
 		473B5DB024242D90003ED92B /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5DAF24242D90003ED92B /* Date+Extension.swift */; };
 		473B5DB224242DEE003ED92B /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B5DB124242DEE003ED92B /* String+Extension.swift */; };
+		4741C3C0242BD1B0008CB0EA /* DriverListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4741C3BF242BD1AF008CB0EA /* DriverListViewController.swift */; };
+		4741C3C2242BDAC5008CB0EA /* AddNewDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4741C3C1242BDAC5008CB0EA /* AddNewDriverViewController.swift */; };
+		4741C3C4242BDB5D008CB0EA /* DriverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4741C3C3242BDB5D008CB0EA /* DriverTableViewCell.swift */; };
 		47EA14B82422EB9700C635D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EA14B72422EB9700C635D9 /* AppDelegate.swift */; };
 		47EA14BA2422EB9700C635D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EA14B92422EB9700C635D9 /* SceneDelegate.swift */; };
 		47EA14BC2422EB9700C635D9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EA14BB2422EB9700C635D9 /* LoginViewController.swift */; };
@@ -66,6 +69,9 @@
 		473B5DAB24242CA6003ED92B /* VehicleRent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleRent.swift; sourceTree = "<group>"; };
 		473B5DAF24242D90003ED92B /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		473B5DB124242DEE003ED92B /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		4741C3BF242BD1AF008CB0EA /* DriverListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverListViewController.swift; sourceTree = "<group>"; };
+		4741C3C1242BDAC5008CB0EA /* AddNewDriverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewDriverViewController.swift; sourceTree = "<group>"; };
+		4741C3C3242BDB5D008CB0EA /* DriverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverTableViewCell.swift; sourceTree = "<group>"; };
 		47EA14B42422EB9700C635D9 /* VehicleRentingSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VehicleRentingSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47EA14B72422EB9700C635D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47EA14B92422EB9700C635D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +105,8 @@
 				4719A5BF2427D65500C2BDA7 /* AddNewCustomerViewController.swift */,
 				4719A5C3242800CB00C2BDA7 /* OwnerListViewController.swift */,
 				4719A5C82428775000C2BDA7 /* AddNewOwnerViewController.swift */,
+				4741C3BF242BD1AF008CB0EA /* DriverListViewController.swift */,
+				4741C3C1242BDAC5008CB0EA /* AddNewDriverViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -114,8 +122,10 @@
 		4719A5C72428762600C2BDA7 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				471B152B24292FF100862807 /* OwnerTableViewCell.swift */,
 				47182AFE2426E9B8000DDAB5 /* MenuTableViewCell.swift */,
 				4719A5BD2427CE0E00C2BDA7 /* CustomerTableViewCell.swift */,
+				4741C3C3242BDB5D008CB0EA /* DriverTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -193,7 +203,6 @@
 				47EA14C02422EB9B00C635D9 /* Assets.xcassets */,
 				47EA14C22422EB9B00C635D9 /* LaunchScreen.storyboard */,
 				47EA14C52422EB9B00C635D9 /* Info.plist */,
-				471B152B24292FF100862807 /* OwnerTableViewCell.swift */,
 			);
 			path = VehicleRentingSystem;
 			sourceTree = "<group>";
@@ -286,6 +295,7 @@
 				4719A5C4242800CB00C2BDA7 /* OwnerListViewController.swift in Sources */,
 				473B5DA02424279F003ED92B /* Driver.swift in Sources */,
 				473B5DB224242DEE003ED92B /* String+Extension.swift in Sources */,
+				4741C3C0242BD1B0008CB0EA /* DriverListViewController.swift in Sources */,
 				473B5DA2242427F7003ED92B /* Person.swift in Sources */,
 				47182AFD2426E790000DDAB5 /* HomeViewController.swift in Sources */,
 				473B5DA6242428D6003ED92B /* Customer.swift in Sources */,
@@ -294,7 +304,9 @@
 				47EA14BA2422EB9700C635D9 /* SceneDelegate.swift in Sources */,
 				4719A5C92428775000C2BDA7 /* AddNewOwnerViewController.swift in Sources */,
 				473B5DAA2424299B003ED92B /* MotorCycle.swift in Sources */,
+				4741C3C4242BDB5D008CB0EA /* DriverTableViewCell.swift in Sources */,
 				4719A5BC2427C9A300C2BDA7 /* CustomerListViewController.swift in Sources */,
+				4741C3C2242BDAC5008CB0EA /* AddNewDriverViewController.swift in Sources */,
 				4719A5C22427D6DE00C2BDA7 /* Validation.swift in Sources */,
 				47182B01242716F1000DDAB5 /* ContactUsViewController.swift in Sources */,
 			);
