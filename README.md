@@ -1,4 +1,4 @@
-# VehicleRentingSystem
+# Vehicle Renting System IOS
 
 # Group6_W2020_MAD3115_FP
 
