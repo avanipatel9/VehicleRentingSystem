@@ -1,13 +1,19 @@
 # VehicleRentingSystem
 
-Group6_W2020_MAD3115_FP
-Vehicle Renting System
+# Group6_W2020_MAD3115_FP
+
+# Vehicle Renting System
+
+
 Avani Patel : C0772788
 Charmi Patel: C0768448
 Shreya Vaghasiya : C0777726
-Jira Link: https://charmipatel.atlassian.net/secure/RapidBoard.jspa?rapidView=4&projectKey=VEH&view=planning.nodetail&issueLimit=100
 
-References:
+
+# Jira Link: 
+https://charmipatel.atlassian.net/secure/RapidBoard.jspa?rapidView=4&projectKey=VEH&view=planning.nodetail&issueLimit=100
+
+# References:
 
 https://stackoverflow.com/questions/43309792/multiple-images-in-one-imageview?rq=1
 
