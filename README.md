@@ -2,14 +2,9 @@
 
 # Group6_W2020_MAD3115_FP
 
-
-
-
-Avani Patel : C0772788
-
-Charmi Patel: C0768448
-
-Shreya Vaghasiya : C0777726
+Group Members: 1)Avani Patel
+               2)Charmi Patel
+               3)Shreya Vaghasiya
 
 
 
