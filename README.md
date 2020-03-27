@@ -40,8 +40,6 @@ https://cocoacasts.com/what-is-a-singleton-and-how-to-create-one-in-swift
 
 https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html
 
-https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html
-
 https://nsscreencast.com/episodes/367-dates-and-times
 
 https://stackoverflow.com/questions/27998409/email-phone-validation-in-swift
@@ -49,3 +47,5 @@ https://stackoverflow.com/questions/27998409/email-phone-validation-in-swift
 https://www.oreilly.com/library/view/regular-expressions-cookbook/9781449327453/ch04s02.html
 
 https://stackoverflow.com/questions/24723431/swift-days-between-two-nsdates
+
+https://www.youtube.com/watch?v=Tr5JjxnE8yU
