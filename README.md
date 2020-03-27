@@ -2,12 +2,15 @@
 
 # Group6_W2020_MAD3115_FP
 
-# Vehicle Renting System
+
 
 
 Avani Patel : C0772788
+
 Charmi Patel: C0768448
+
 Shreya Vaghasiya : C0777726
+
 
 
 # Jira Link: 
