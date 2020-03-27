@@ -70,8 +70,6 @@ class Customer: Person//, Codable
         self.password = password
         self.address = address
         self.city = city
-        self.address = address
-        self.city = city
     }
     
     func addVehicleListRented(vehicleRented: VehicleRent, vehicleIdentificationNumber: String)
@@ -85,44 +83,18 @@ class Customer: Person//, Codable
         vehicleListRented.removeValue(forKey: vehicleIdentificationNumber)
     }
     
+    func getAllVehiclesRented() -> [VehicleRent]
+    {
+        var allRentedVehicles = [VehicleRent]()
+            for rentedViehicle in vehicleListRented
+            {
+                allRentedVehicles.append(rentedViehicle.value)
+            }
+        return allRentedVehicles
+    }
+    
     func getTotalBill()-> Double {
         return self.totalBillToPay;
     }
     
-//    func Display()
-//    {
-//        print("\n \n ***************** Customer Details ************************ \n")
-//        print("---------Customer with Vehicle List----------\n")
-//        print("First Name : \(self.firstName)")
-//        print("Last Name: \(self.lastName)")
-//        print("Gender : \(self.gender)")
-//        print("Mobile Number : \(self.mobileNumber)")
-//        print("BirthDate : \(self.birthDate!.getForamttedDate())")
-//        print("Emaild ID : \(self.emailID ?? "nil")")
-//        print("User Name : \(self.userName)")
-//        //Add extension for password encrypt decrypt
-//        print("Password Encrypted : \(self.password.encryptPassword())")
-//        print("Password Decrypted : \(self.password.decryptPassword())")
-//        print("Age : \(self.age!)")
-//        
-//        if vehicleListRented.count != 0
-//        {
-//            var grandTotal = 0.0
-//            for vehicle in vehicleListRented
-//            {
-//                print("\n---------Vehicle List Rented by \(firstName) -------------\n")
-//                vehicle.value.Display()
-//                grandTotal = grandTotal + vehicle.value.totalBillToPay
-//            }
-//            print("-----------------------------------------------")
-//            print("\t \t Grand Total Bill : \(grandTotal)")
-//            print("-----------------------------------------------")
-//        }
-//        else
-//        {
-//            print("-----------------------------------------------")
-//            print("\t \t No vehicle found for this customer")
-//            print("-----------------------------------------------")
-//        }
-//    }
 }

@@ -9,11 +9,23 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    @IBOutlet weak var vehicleImageView: UIImageView!
+    
+    @IBOutlet weak var segmentVehicle: UISegmentedControl!
 
     var menuVC : MenuViewController!
-    override func viewDidLoad() {
+    let imagesListArray : [UIImage]=[UIImage(named: "car1")!, UIImage(named: "car2")!, UIImage(named: "bike1")!, UIImage(named: "bike2")!, UIImage(named: "bus1")!, UIImage(named: "bus2")!]
+    
+    
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
+        self.vehicleImageView.animationImages = imagesListArray
+        self.vehicleImageView.animationDuration = 6.0
+        self.vehicleImageView.startAnimating()
         menuVC = (self.storyboard?.instantiateViewController(identifier: "MenuViewController"))! as MenuViewController
         
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToGesture))
@@ -24,6 +36,7 @@ class HomeViewController: UIViewController {
         
         self.view.addGestureRecognizer(swipeRight)
         self.view.addGestureRecognizer(swipeLeft)
+        
         
     }
     
@@ -95,5 +108,8 @@ class HomeViewController: UIViewController {
         
         AppDelegate.menuBoolean = true
     }
-
+    
+    
+    
+    
 }

@@ -135,6 +135,7 @@ class AddNewDriverViewController: UIViewController,UITextFieldDelegate {
         {
             
             var validatedDriverEmail = String()
+            var validatedDriverMobile = String()
             
             guard let newDriverID = txtDriverID.text else {return}
             guard let newDriverFirstName = txtDriverFirstName.text else {return}
@@ -218,6 +219,16 @@ class AddNewDriverViewController: UIViewController,UITextFieldDelegate {
                 // adding new customer
             else
             {
+                if self.validation.isValidPhone(phone: newDriverMobileNo) == false
+                {
+                    showAlert(message: "Invalid Mobile Number")
+                    return
+                }
+                else
+                {
+                    validatedDriverMobile = newDriverMobileNo
+                }
+                
                 if self.validation.isValidEmail(email: newDriverEmail) == false
                 {
                     showAlert(message: "Invalid Email ID")
@@ -254,7 +265,7 @@ class AddNewDriverViewController: UIViewController,UITextFieldDelegate {
                 var tempSalary: Double
                 tempSalary = Double(newDriverSalary)!
                 
-                DataStorage.getInstance().addDriver(driver: Driver(id: newDriverID, firstName: newDriverFirstName, lastName: newDriverLastName, gender: tempGender, mobileNumber: newDriverMobileNo, birthDate: newDriverBirthDate.toDate(), emailID: validatedDriverEmail, userName: newDriverUserName, password: newDriverPassword, drivingLicenceNumber: newDrivingLicenceNo, isHistroyCleared: tempDrivingHystory, salary: tempSalary))
+                DataStorage.getInstance().addDriver(driver: Driver(id: newDriverID, firstName: newDriverFirstName, lastName: newDriverLastName, gender: tempGender, mobileNumber: validatedDriverMobile, birthDate: newDriverBirthDate.toDate(), emailID: validatedDriverEmail, userName: newDriverUserName, password: newDriverPassword, drivingLicenceNumber: newDrivingLicenceNo, isHistroyCleared: tempDrivingHystory, salary: tempSalary))
                 navigationController?.popViewController(animated: true)
             }
         }

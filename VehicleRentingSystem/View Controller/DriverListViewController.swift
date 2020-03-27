@@ -51,6 +51,21 @@ extension DriverListViewController: UITableViewDataSource, UITableViewDelegate
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    // shows the selected customers details in ShowBillDetailsViewController
+            let drivers = DataStorage.getInstance().getAllDrivers()
+            let selectedDriver = drivers[indexPath.row]
+            
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let driverDetailsVC = sb.instantiateViewController(identifier: "DriverDetailsViewController") as DriverDetailsViewController
+            //let vehicleDetailsVC = sb.instantiateViewController(identifier: "RentedVehicleListViewController") as RentedVehicleListViewController
+            driverDetailsVC.driver = selectedDriver
+            //vehicleDetailsVC.customer = selectedCustomer
+            
+            self.navigationController?.pushViewController(driverDetailsVC, animated: true)
+            
+        }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

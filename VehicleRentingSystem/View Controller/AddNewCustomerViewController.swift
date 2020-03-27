@@ -125,6 +125,7 @@ class AddNewCustomerViewController: UIViewController, UITextFieldDelegate {
     @objc func saveNewCustomer()
     {
         var validatedCustomerEmail = String()
+        var validatedMobile = String()
         
         guard let newCustomerID = txtCustomerID.text else {return}
         guard let newCustomerFirstName = txtFirstName.text else {return}
@@ -212,6 +213,16 @@ class AddNewCustomerViewController: UIViewController, UITextFieldDelegate {
                 validatedCustomerEmail = newCustomerEmail
             }
             
+            if self.validation.isValidPhone(phone: newCustomerMobile) == false
+            {
+                showAlert(message: "Invalid Mobile Number")
+                return
+            }
+            else
+            {
+                validatedMobile = newCustomerMobile
+            }
+            
             var tempGender:Gender
             
             if newCustomerGender == "Male"{
@@ -224,7 +235,7 @@ class AddNewCustomerViewController: UIViewController, UITextFieldDelegate {
                 tempGender = .Other
             }
             
-            DataStorage.getInstance().addCustomer(customer: Customer(id: newCustomerID, firstName: newCustomerFirstName, lastName: newCustomerLastName, gender: tempGender, mobileNumber: newCustomerMobile, birthDate: newCustomerBirthDate.toDate(), emailID: validatedCustomerEmail, userName: newCustomerUserName, password: newCustomerPassword, address: newCustomerAddress, city: newCustomerCity))
+            DataStorage.getInstance().addCustomer(customer: Customer(id: newCustomerID, firstName: newCustomerFirstName, lastName: newCustomerLastName, gender: tempGender, mobileNumber: validatedMobile, birthDate: newCustomerBirthDate.toDate(), emailID: validatedCustomerEmail, userName: newCustomerUserName, password: newCustomerPassword, address: newCustomerAddress, city: newCustomerCity))
             navigationController?.popViewController(animated: true)
         }
     }

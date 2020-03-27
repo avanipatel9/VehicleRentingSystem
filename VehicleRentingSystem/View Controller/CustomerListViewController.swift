@@ -56,6 +56,21 @@ extension CustomerListViewController:UITableViewDataSource, UITableViewDelegate
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    // shows the selected customers details in ShowBillDetailsViewController
+            let customers = DataStorage.getInstance().getAllCustomers()
+            let selectedCustomer = customers[indexPath.row]
+            
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let custDetailsVC = sb.instantiateViewController(identifier: "CustomerDetailsViewController") as CustomerDetailsViewController
+            let vehicleDetailsVC = sb.instantiateViewController(identifier: "RentedVehicleListViewController") as RentedVehicleListViewController
+            custDetailsVC.customer = selectedCustomer
+            vehicleDetailsVC.customer = selectedCustomer
+            
+            self.navigationController?.pushViewController(custDetailsVC, animated: true)
+            
+        }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

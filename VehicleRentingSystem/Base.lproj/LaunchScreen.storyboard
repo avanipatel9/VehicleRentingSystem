@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,15 +12,67 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="iUa-BZ-q8S">
+                                <rect key="frame" x="0.0" y="129" width="414" height="284"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="284" id="aIY-0I-Xda"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charmi Patel C0768448" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ype-Qg-Shk">
+                                <rect key="frame" x="58" y="503" width="298" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6Tl-6a-v0e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shreya Vaghasiya C0777726" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NX6-yU-s68">
+                                <rect key="frame" x="28" y="563" width="358" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="qfy-Kk-47F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avani Patel  C0772788" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qp9-xj-Gzp">
+                                <rect key="frame" x="63" y="443" width="288" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="yJ8-Ad-Edc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iUa-BZ-q8S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="E7g-R6-kKK"/>
+                            <constraint firstItem="NX6-yU-s68" firstAttribute="centerX" secondItem="iUa-BZ-q8S" secondAttribute="centerX" id="Lfg-PC-lGU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iUa-BZ-q8S" secondAttribute="trailing" id="Q90-dS-l3o"/>
+                            <constraint firstItem="iUa-BZ-q8S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Toi-xV-HDG"/>
+                            <constraint firstItem="iUa-BZ-q8S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="YdM-6s-cwW"/>
+                            <constraint firstItem="iUa-BZ-q8S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="ZwP-mZ-aEb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iUa-BZ-q8S" secondAttribute="trailing" id="eJv-Fu-d1F"/>
+                            <constraint firstItem="Qp9-xj-Gzp" firstAttribute="centerX" secondItem="iUa-BZ-q8S" secondAttribute="centerX" id="edV-Ve-mVr"/>
+                            <constraint firstItem="Ype-Qg-Shk" firstAttribute="centerX" secondItem="iUa-BZ-q8S" secondAttribute="centerX" id="kmi-7m-7oc"/>
+                            <constraint firstItem="Qp9-xj-Gzp" firstAttribute="top" secondItem="iUa-BZ-q8S" secondAttribute="bottom" constant="30" id="uiW-fN-8hL"/>
+                            <constraint firstItem="NX6-yU-s68" firstAttribute="top" secondItem="Ype-Qg-Shk" secondAttribute="bottom" constant="20" id="v7M-3h-zER"/>
+                            <constraint firstItem="Ype-Qg-Shk" firstAttribute="top" secondItem="Qp9-xj-Gzp" secondAttribute="bottom" constant="20" id="xNd-rc-OvG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="112.5" height="112.5"/>
+    </resources>
 </document>

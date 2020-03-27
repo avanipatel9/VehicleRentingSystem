@@ -10,7 +10,7 @@ import UIKit
 
 class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let menuTitlesArray = ["Home", "Customers", "Owners", "Drivers", "Contact Us", "About Us", "Logout"]
+    let menuTitlesArray = ["Home", "Customers", "Owners", "Drivers", "Cars", "Buses", "Contact Us", "About Us", "Logout"]
     
     @IBOutlet weak var tblViewMenu: UITableView!
     override func viewDidLoad() {
@@ -49,6 +49,12 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         case "Drivers":
             let driversVC = sb.instantiateViewController(identifier: "DriverListViewController") as DriverListViewController
             self.navigationController?.pushViewController(driversVC, animated: true)
+        case "Cars":
+            let carsVC = sb.instantiateViewController(identifier: "CarDetailsListViewController") as CarDetailsListViewController
+            self.navigationController?.pushViewController(carsVC, animated: true)
+        case "Buses":
+            let busesVC = sb.instantiateViewController(identifier: "BusDetailsViewController") as BusDetailsViewController
+            self.navigationController?.pushViewController(busesVC, animated: true)
         case "Contact Us":
             let contactUsVC = sb.instantiateViewController(identifier: "ContactUsViewController") as ContactUsViewController
             self.navigationController?.pushViewController(contactUsVC, animated: true)

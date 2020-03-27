@@ -125,6 +125,8 @@ class AddNewOwnerViewController: UIViewController,UITextFieldDelegate {
         //        navigationController?.pushViewController(addNewCustomerVC, animated: true)
         
         var validatedOwnerEmail = String()
+        var validatedOwnerMobile = String()
+        var validatedLandLine = String()
         
         guard let newOwnerID = txtOwnerID.text else {return}
         guard let newOwnerFirstName = txtOwnerFirstName.text else {return}
@@ -208,6 +210,16 @@ class AddNewOwnerViewController: UIViewController,UITextFieldDelegate {
             // adding new customer
         else
         {
+            if self.validation.isValidPhone(phone: newOwnerMobileNo) == false
+            {
+                showAlert(message: "Invalid Mobile No")
+                return
+            }
+            else
+            {
+                validatedOwnerMobile = newOwnerMobileNo
+            }
+            
             if self.validation.isValidEmail(email: newOwnerEmail) == false
             {
                 showAlert(message: "Invalid Email ID")
@@ -216,6 +228,16 @@ class AddNewOwnerViewController: UIViewController,UITextFieldDelegate {
             else
             {
                 validatedOwnerEmail = newOwnerEmail
+            }
+            
+            if self.validation.isValidPhone(phone: newLandLineNo) == false
+            {
+                showAlert(message: "Invalid Landline Number")
+                return
+            }
+            else
+            {
+                validatedLandLine = newLandLineNo
             }
             
             var tempGender:Gender
@@ -230,7 +252,7 @@ class AddNewOwnerViewController: UIViewController,UITextFieldDelegate {
                 tempGender = .Other
             }
             
-            DataStorage.getInstance().addOwner(owner: Owner(id: newOwnerID, firstName: newOwnerFirstName, lastName: newOwnerLastName, gender: tempGender, mobileNumber: newOwnerMobileNo, birthDate: newOwnerBirthDate.toDate(), emailID: validatedOwnerEmail, userName: newOwnerUserName, password: newOwnerPassword, companyTitle: newCompanyTitle, landlineNumber: newLandLineNo, website: newWebsite))
+            DataStorage.getInstance().addOwner(owner: Owner(id: newOwnerID, firstName: newOwnerFirstName, lastName: newOwnerLastName, gender: tempGender, mobileNumber: validatedOwnerMobile, birthDate: newOwnerBirthDate.toDate(), emailID: validatedOwnerEmail, userName: newOwnerUserName, password: newOwnerPassword, companyTitle: newCompanyTitle, landlineNumber: validatedLandLine, website: newWebsite))
             navigationController?.popViewController(animated: true)
         }
     }

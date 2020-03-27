@@ -51,6 +51,21 @@ extension OwnerListViewController: UITableViewDataSource, UITableViewDelegate
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    // shows the selected customers details in ShowBillDetailsViewController
+            let owners = DataStorage.getInstance().getAllOwners()
+            let selectedOwner = owners[indexPath.row]
+            
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let ownerDetailsVC = sb.instantiateViewController(identifier: "OwnerDetailsViewController") as OwnerDetailsViewController
+            //let vehicleDetailsVC = sb.instantiateViewController(identifier: "RentedVehicleListViewController") as RentedVehicleListViewController
+            ownerDetailsVC.owner = selectedOwner
+            //vehicleDetailsVC.customer = selectedCustomer
+            
+            self.navigationController?.pushViewController(ownerDetailsVC, animated: true)
+            
+        }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
